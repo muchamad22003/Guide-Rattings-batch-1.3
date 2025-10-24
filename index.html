@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rating Tour Guide Laut</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Icon pojok kanan atas -->
+  <div class="icon-top">
+    <img src="assets/icon.jpg" alt="Icon Tour Guide" class="icon-portrait" />
+  </div>
+
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo-box">
+      <img src="asset/logo fix 2.png" alt="Logo Tour Guide" class="logo-oval" />
+    </div>
+
+    <h1>⭐ Beri Rating Tour Guide Kamu!</h1>
+    <p class="subtitle">Bagaimana pengalamanmu bersama pemandu wisata hari ini?</p>
+
+    <!-- Input nama -->
+    <input type="text" id="username" placeholder="Masukkan nama kamu..." />
+
+    <!-- Rating -->
+    <div class="stars">
+      <i class="star" data-value="1">★</i>
+      <i class="star" data-value="2">★</i>
+      <i class="star" data-value="3">★</i>
+      <i class="star" data-value="4">★</i>
+      <i class="star" data-value="5">★</i>
+    </div>
+
+    <!-- Kesan -->
+    <textarea id="comment" placeholder="Tulis kesan kamu terhadap tour guide..."></textarea>
+
+    <button id="submitBtn">Kirim Rating</button>
+    <p id="feedback"></p>
+
+    <!-- Statistik -->
+    <div class="summary">
+      <h2>📊 Statistik Rating</h2>
+      <p>Total Penilai: <span id="totalRatings">0</span></p>
+      <p>Rata-rata Rating: <span id="averageRating">0</span> ⭐</p>
+    </div>
+
+    <!-- Admin -->
+    <button id="openAdmin">🔑 Admin Panel</button>
+
+    <!-- Login Admin -->
+    <div id="adminLogin" class="hidden">
+      <h2>Login Admin</h2>
+      <input type="password" id="adminPassword" placeholder="Masukkan password admin..." />
+      <p id="loginError" class="error"></p>
+      <button id="loginBtn">Masuk</button>
+      <button id="cancelLogin">Batal</button>
+    </div>
+
+    <!-- Panel Admin -->
+    <div id="adminPanel" class="hidden">
+      <h2>📋 Panel Admin</h2>
+      <table id="ratingTable">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Rating</th>
+            <th>Kesan</th>
+            <th>Tanggal</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <p>Total Penilai: <span id="adminTotal">0</span></p>
+      <p>Rata-rata Rating: <span id="adminAverage">0</span> ⭐</p>
+
+      <button id="clearData">🗑️ Hapus Semua Data</button>
+      <button id="closeAdmin">🚪 Keluar Admin</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

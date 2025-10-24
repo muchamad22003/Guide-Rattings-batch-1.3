@@ -1,0 +1,556 @@
+/* ================================================
+   🌊 STYLE UTAMA - RATING TOUR GUIDE LAUT
+   ================================================ */
+
+/* ====== FONT & BODY ====== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0066ff, #00bfff);
+  background-image: ('background/About\ us\ AI\ -\ Copy.JPG');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding-top: 80px;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ================================================
+   🔹 ICON & LOGO
+   ================================================ */
+
+/* Icon pojok kanan atas */
+.icon-top {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+.icon-portrait {
+  width: 60px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo oval di tengah */
+.logo-box {
+  margin-bottom: 10px;
+}
+
+.logo-oval {
+  width: 180px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ================================================
+   🔹 CONTAINER UTAMA
+   ================================================ */
+.container {
+  background: rgba(0, 30, 60, 0.6);
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+}
+
+/* ================================================
+   🔹 TEKS & HEADING
+   ================================================ */
+h1 {
+  font-size: 1.7em;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+/* ================================================
+   🔹 INPUT & TEXTAREA
+   ================================================ */
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 85%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1em;
+  color: #004080;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* ================================================
+   ⭐ BINTANG RATING
+   ================================================ */
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.star {
+  color: #b0d8ff;
+  opacity: 0.7;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.star:hover,
+.star.active {
+  color: #00ffff;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* ================================================
+   🔹 TOMBOL
+   ================================================ */
+button {
+  background: #00bfff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #0099cc;
+  transform: scale(1.05);
+}
+
+/* ================================================
+   🔹 STATISTIK RATING
+   ================================================ */
+.summary {
+  margin-top: 20px;
+  background: rgba(0, 100, 180, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ================================================
+   🔹 LOGIN ADMIN
+   ================================================ */
+.hidden {
+  display: none;
+}
+
+.error {
+  color: #ff6961;
+  font-weight: bold;
+}
+
+/* ================================================
+   🔹 PANEL ADMIN
+   ================================================ */
+#adminPanel {
+  margin-top: 20px;
+}
+
+#adminPanel table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+#adminPanel th,
+#adminPanel td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px;
+  text-align: center;
+}
+
+#adminPanel th {
+  background: rgba(0, 100, 180, 0.4);
+}
+
+/* ================================================
+   🔹 RESPONSIVE DESIGN
+   ================================================ */
+
+/* Untuk layar smartphone */
+@media (max-width: 600px) {
+  body {
+    padding-top: 60px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .container {
+    width: 95%;
+    padding: 20px;
+    max-width: none;
+  }
+
+  .logo-oval {
+    width: 140px;
+    height: 60px;
+  }
+
+  .icon-portrait {
+    width: 50px;
+    height: 70px;
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+
+  .stars {
+    font-size: 32px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    width: 95%;
+    font-size: 0.95em;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 0.9em;
+  }
+
+  #adminPanel table {
+    font-size: 0.8em;
+  }
+
+  #adminPanel th,
+  #adminPanel td {
+    padding: 4px;
+  }
+}
+
+/* Untuk layar tablet (600px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    width: 85%;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .logo-oval {
+    width: 160px;
+    height: 70px;
+  }
+
+  .stars {
+    font-size: 36px;
+  }
+}
+
+/* Untuk layar laptop besar atau desktop */
+@media (min-width: 901px) {
+  .container {
+    max-width: 500px;
+  }
+}
+/* ================================================
+   🌊 STYLE UTAMA - RATING TOUR GUIDE LAUT
+   ================================================ */
+
+/* ====== FONT & BODY ====== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0066ff, #00bfff);
+  background-image: url('ocean-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding-top: 80px;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ================================================
+   🔹 ICON & LOGO
+   ================================================ */
+
+/* Icon pojok kanan atas */
+.icon-top {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+.icon-portrait {
+  width: 60px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo oval di tengah */
+.logo-box {
+  margin-bottom: 10px;
+}
+
+.logo-oval {
+  width: 180px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ================================================
+   🔹 CONTAINER UTAMA
+   ================================================ */
+.container {
+  background: rgba(0, 30, 60, 0.6);
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+}
+
+/* ================================================
+   🔹 TEKS & HEADING
+   ================================================ */
+h1 {
+  font-size: 1.7em;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+/* ================================================
+   🔹 INPUT & TEXTAREA
+   ================================================ */
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 85%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1em;
+  color: #004080;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* ================================================
+   ⭐ BINTANG RATING
+   ================================================ */
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.star {
+  color: #b0d8ff;
+  opacity: 0.7;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.star:hover,
+.star.active {
+  color: #00ffff;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* ================================================
+   🔹 TOMBOL
+   ================================================ */
+button {
+  background: #00bfff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #0099cc;
+  transform: scale(1.05);
+}
+
+/* ================================================
+   🔹 STATISTIK RATING
+   ================================================ */
+.summary {
+  margin-top: 20px;
+  background: rgba(0, 100, 180, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ================================================
+   🔹 LOGIN ADMIN
+   ================================================ */
+.hidden {
+  display: none;
+}
+
+.error {
+  color: #ff6961;
+  font-weight: bold;
+}
+
+/* ================================================
+   🔹 PANEL ADMIN
+   ================================================ */
+#adminPanel {
+  margin-top: 20px;
+}
+
+#adminPanel table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+#adminPanel th,
+#adminPanel td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px;
+  text-align: center;
+}
+
+#adminPanel th {
+  background: rgba(0, 100, 180, 0.4);
+}
+
+/* ================================================
+   🔹 RESPONSIVE DESIGN
+   ================================================ */
+
+/* Untuk layar smartphone */
+@media (max-width: 600px) {
+  body {
+    padding-top: 60px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .container {
+    width: 95%;
+    padding: 20px;
+    max-width: none;
+  }
+
+  .logo-oval {
+    width: 140px;
+    height: 60px;
+  }
+
+  .icon-portrait {
+    width: 50px;
+    height: 70px;
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+
+  .stars {
+    font-size: 32px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    width: 95%;
+    font-size: 0.95em;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 0.9em;
+  }
+
+  #adminPanel table {
+    font-size: 0.8em;
+  }
+
+  #adminPanel th,
+  #adminPanel td {
+    padding: 4px;
+  }
+}
+
+/* Untuk layar tablet (600px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    width: 85%;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .logo-oval {
+    width: 160px;
+    height: 70px;
+  }
+
+  .stars {
+    font-size: 36px;
+  }
+}
+
+/* Untuk layar laptop besar atau desktop */
+@media (min-width: 901px) {
+  .container {
+    max-width: 500px;
+  }
+}
